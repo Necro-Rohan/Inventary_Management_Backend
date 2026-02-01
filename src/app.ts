@@ -28,7 +28,7 @@ export default class App implements App_Interface{
 
   async connectDatabase(): Promise<void> {
     try {
-      await mongoose.connect("")
+      await mongoose.connect(process.env.MONGO_URI || "")
       console.log("Database Connected")
     } catch (error) {
       console.log(error)
