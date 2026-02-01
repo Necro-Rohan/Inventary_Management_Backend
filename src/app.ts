@@ -1,5 +1,13 @@
 import express from "express";
 import mongoose from "mongoose";
+import cors from "cors";
+import dotenv from "dotenv";
+import CategoryRoutes from "./routes/category.routes";
+import ProductRoutes from "./routes/product.routes";
+import SupplierRoutes from "./routes/supplier.routes";
+import { errorHandler } from "./middleware/error.middleware";
+
+dotenv.config();
 
 
 interface App_Interface{
@@ -37,9 +45,15 @@ export default class App implements App_Interface{
   }
 
   initializeRoutes(): void {
+    this.app.use(cors())
     this.app.use(express.json())
     this.app.get("/", (req, res) => {
       return res.status(200).send("Welcome, Server Working")
     })
+    this.app.use("/api/categories", CategoryRoutes)
+    this.app.use("/api/products", ProductRoutes)
+    this.app.use("/api/suppliers", SupplierRoutes)
+
+    this.app.use(errorHandler)
   }
 }
