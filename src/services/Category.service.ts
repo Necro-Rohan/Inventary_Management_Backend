@@ -1,4 +1,4 @@
-import { CategoryModel } from '../models/Category.model';
+import { CategoryModel } from '../models/Category.model.js';
 
 export class CategoryService {
 

@@ -1,5 +1,5 @@
-import { ProductModel } from "../models/Product.model";
-import { TransactionModel } from "../models/InventoryTransaction.model";
+import { ProductModel } from "../models/Product.model.js";
+import { TransactionModel } from "../models/InventoryTransaction.model.js";
 
 
 export class ProductService {

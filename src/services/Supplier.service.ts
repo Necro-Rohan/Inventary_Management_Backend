@@ -1,4 +1,4 @@
-import { SupplierModel } from '../models/Supplier.model';
+import { SupplierModel } from '../models/Supplier.model.js';
 
 export class SupplierService {
 
