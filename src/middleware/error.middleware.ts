@@ -6,4 +6,6 @@ export const errorHandler = (err: Error, req: Request, res: Response, next: Next
     success: false,
     error: err.message || 'Server Error'
   });
+
+  next();
 };

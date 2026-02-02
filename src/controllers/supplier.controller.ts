@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import { SupplierService } from '../services/supplier.service';
+import { SupplierService } from '../services/Supplier.service.js';
 
 const supplierService = new SupplierService();
 

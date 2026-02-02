@@ -2,10 +2,10 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import CategoryRoutes from "./routes/category.routes";
-import ProductRoutes from "./routes/product.routes";
-import SupplierRoutes from "./routes/supplier.routes";
-import { errorHandler } from "./middleware/error.middleware";
+import CategoryRoutes from "./routes/category.routes.js";
+import ProductRoutes from "./routes/product.routes.js";
+import SupplierRoutes from "./routes/supplier.routes.js";
+import { errorHandler } from "./middleware/error.middleware.js";
 
 dotenv.config();
 
